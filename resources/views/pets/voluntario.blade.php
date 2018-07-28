@@ -19,14 +19,10 @@
 							</div>
 								<div class="col blogdata_1_of_2">
 									<div class="blog_heading">
-									<p><a href="single.html"><span>Lorem ipsum dolor sit amet consec.</span></a></p>
-									<p class="post">Posted on jan 13th, 2015 by <a href="#">Finibus Bonorum </a></p>
+									<p><a href="single.html"><span>Voluntariado</span></a></p>
 							     </div>
 									<div class="blog_data">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation consequat.</p>				                     
-				                    <div class="more">
-				         	  		<a href="single.html" class="btn btn-1 btn-1d">Read More</a>
-				         	  			</div>
+										<p>Un voluntario es la persona que por elección propia y por razones ideológicas, éticas, morales o personales decide dedicar una parte de su tiempo, trabajo y recursos a una acción solidaria y altruista, por la cual no recibe ningún tipo de compensación económica, pero sí una contraprestación en satisfacción, aprendizaje y experiencia, entre otras.</p>
 				                   </div>
 								</div>
 								 <div class="clearfix"></div>	
@@ -42,14 +38,15 @@
 							</div>
 								<div class="col blogdata_1_of_2">
 								<div class="blog_heading">
-									<p><a href="single.html"><span>Lorem ipsum dolor sit amet consec.</span></a></p>
-									<p class="post">Posted on apr 10th, 2015 by <a href="#">Finibus Bonorum </a></p>
+									<p><a href="single.html"><span>Las actividades a desarrollar por los voluntarios serán:</span></a></p>
 							     </div>
 									<div class="blog_data">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation consequat.</p>				                     
-				                    <div class="more">
-				         	  			<a href="single.html" class="btn btn-1 btn-1d">Read More</a>
-				         	  			</div>
+										<p>Paseo, ejercicio de los perros.
+											Socialización y educación de los perros.
+										    Higiene de los animales (cepillar, cortar el pelo y bañar).
+											Socialización de los gatos.
+											Recopilación de información sobre el carácter del animal: ayudará a elaborar fichas más completas de los animales
+											Detección de cualquier anomalía: En el tiempo de ocio, poniéndola en conocimiento del equipo veterinario del centro.</p>				                     
 				                   </div>
 								</div>								
 								 <div class="clearfix"></div>
@@ -65,62 +62,22 @@
 							</div>
 								<div class="col blogdata_1_of_2">
 								<div class="blog_heading">
-									<p><a href="single.html"><span>Lorem ipsum dolor sit amet consec.</span></a></p>
-									<p class="post">Posted on june 27th, 2015 by <a href="#">Finibus Bonorum </a> </p>
+									<p><a href="single.html"><span>Para ser voluntario se deben cumplir los siguientes requisitos:</span></a>
 							     </div>	
 									<div class="blog_data">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation consequat.</p>				                     
-				                    <div class="more">
-				         	  			<a href="single.html" class="btn btn-1 btn-1d">Read More</a>
-				         	  			</div>
+										<p>
+										* Ser mayor de edad. <br>
+										* Contar con un elevado sentido de la responsabilidad y del compromiso. <br>
+										* La colaboración que se preste estará dirigida al incremento del bienestar y confort de los animales alojados, además de promover la adopción y fomentar la lucha contra el maltrato y el abandono. <br>
+										* Conocer y aceptar las normas de funcionamiento y métodos de trabajo del Albergue Insular de Animales de Gran Canaria</p>				                   
 				                   </div>
 								</div>
 								 <div class="clearfix"></div>
 							</div>
 						 <div class="clearfix"></div>	
 				</div>
-				<div class="content-pagenation">
-						<li><a href="#">Frist</a></li>
-						<li><a href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><span>. . . . . . . . . .</span></li>
-						<li><a href="#">Last</a></li>
-						<div class="clearfix"> </div>
-					</div>
 		 </div>
-				<div class="rsidebar span_1_of_3">
-					 <h3>What We Offer</h3>
-				     		<ul>
-		  						<li>Lorem ipsum dolor sit amet</li>
-		  						<li>Duis aute irure dolor in culpa </li>
-		  						<li>Sunt in culpa qui illum Sunt qui</li>
-		  						<li>vel illum qui dolorem man Sunt qui</li>
-		  						<li>The wise man therefore culpa qui</li>
-		  						<li>Sunt in culpa qui officia Sunt</li>
-		  						<li>Lorem ipsum dolor sit qui</li>
-		  						<li>Duis aute irure dolor in culpa qui </li>
-		  						<li>Sunt in culpa qui officia vel</li>
-		  					</ul>
-		  					<div class="latest_comments">
-					<h3>Latest Comments</h3>
-				<div class="comments">
-					<p><span>admin</span> commented on</p>
-					 <h4><a href="#">Lorem ipsum dolor sit dolor more normal!</a></h4>
-					 <p>June 25th, 2013</p>
-				</div>
-				<div class="comments">
-					<p><span>admin</span> commented on</p>
-					 <h4><a href="#">Lorem ipsum dolor sit dolor more normal!</a></h4>
-					 <p>June 20th, 2013</p>
-				</div>
-				<div class="comments">
-					<p><span>admin</span> commented on</p>
-					 <h4><a href="#">Lorem ipsum dolor sit dolor more normal!</a></h4>
-					 <p>June 15th, 2013</p>
-				</div>
-				</div>
-				</div>
+				
 		    </div>
 	 	
 </div>

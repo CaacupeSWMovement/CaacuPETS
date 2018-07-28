@@ -36,9 +36,9 @@
 				<div class="container">
 					<div class="col-md-6 welcome-grid text-center">
 						<h3>Bienvenido</h3>
-						<h5>Duis autem vel eum iriure dolor in hendrerit in vulputa</h5>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
-						<p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. littera gothica.</p>
+						<h5>CaacuPETS</h5>
+						<p>CaacuPETS es una asociacion que tomó el poposito, ayudar a los animales callejeros en Caacupe, Paraguay.
+						</p>
 					</div>
 					<div class="col-md-6 images">
 						<div class="img1">
@@ -57,11 +57,13 @@
 					<h2>Nosotros</h2>
 					<div class="col-md-6 about-section-grid text-left">
 						<h4>Mision</h4>
-						<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio</p>
+						<p>Nuestra misión es rescatar animales callejeros en riesgo para otorgarles una rehabilitación física y psicológica, brindándoles la oportunidad de un hogar y una familia. <br>Mediante una red integrada podemos realizar esterilizaciones, rescates y adopciones de perros y gatos, logrando concientizar cada día a más personas, quienes se han ido uniendo a esta labor.
+						</p>
 					</div>
 					<div class="col-md-6 about-section-grid text-left">
 						<h4>Vision</h4>
-						<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio</p>
+						<p>Nuestra visión es ser la fundación de animales en riesgo con mayor impacto de Cordillera, generando un cambio efectivo en la conciencia de la sociedad para acabar con el abandono, la humillación y el abuso que sufren miles de animales al día.
+						Educando a través de nuestra gran red de estudiantes y profesionales, lograremos otorgar la oportunidad de un hogar a los callejeros de Caacupé.</p>
 					</div>
 					<div class="clearfix"></div>
 					<a href="{{url('/about')}}" class="btn btn-1 btn-1c">leer mas</a>
@@ -70,8 +72,9 @@
 			<div class="textimonials-section text-center">
 				<div class="container">
 					<img src="images/t.png" alt="" />
-					<h5>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram</h5>
-					<p>Duis autem vel eum iriure dolor</p>
+					<h5>Gracias Caacupets!!! 
+                     Personas tan nobles, 
+						Que solidaria y con alma tan pura la señora Sussana</p>
 					<a href="" class="btn btn-1 btn-1d">Testimonios</a>
 				</div>
 			</div>
