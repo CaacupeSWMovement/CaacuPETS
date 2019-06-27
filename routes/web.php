@@ -11,35 +11,16 @@
 |
 */
 
-Route::get('/welcome', function () {
+Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/admin', [
-  'middleware' => 'auth',
-  'uses' => 'HomeController@indexAdmin'
-  ]);
-
-Route::group(['prefix' => 'noticias'], function() {
-  Route::get('/',[
-    'middleware' => 'auth',
-    'uses' => 'NoticiaController@index'
-    ]);
-  Route::match(['get', 'post'], 'create', 'NoticiaController@create');
-  Route::match(['get', 'put'], 'update/{id}', 'NoticiaController@update');
-  Route::get('show/{id}', 'NoticiaController@show');
-  Route::delete('delete/{id}', 'NoticiaController@destroy');
+Route::group(['middleware' => 'auth'], function () {
+Route::get('/administracion', function () {
+    return view('admin.index');
 });
-
-Route::group(['prefix' => 'mascotas'], function() {
-  Route::get('/',[
-    'middleware' => 'auth',
-    'uses' => 'MascotaController@index'
-    ]);
-  Route::match(['get', 'post'], 'create', 'MascotaController@create');
-  Route::match(['get', 'put'], 'update/{id}', 'MascotaController@update');
-  Route::get('show/{id}', 'MascotaController@show');
-  Route::delete('delete/{id}', 'MascotaController@destroy');
+Route::resource('administracion/noticia','NoticiaController');
+Route::resource('administracion/mascota','MascotaController');
+Route::resource('administracion/user','UserController');
 });
 Auth::routes();
 

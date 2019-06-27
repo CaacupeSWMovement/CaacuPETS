@@ -8,11 +8,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>CaacuPETS</title>
-    @yield('head')
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    @yield('css')
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
@@ -29,27 +26,11 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
+
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/admin') }}">
-                        Administracion
+                    <a class="navbar-brand" href="{{ url('/') }}">
+                        {{ config('app.name', 'Laravel') }}
                     </a>
-                    @guest
-                    @else
-                    <ul class="nav navbar-nav"><!--
-                        <li><a href="#">Link</a></li>
-                        <li><a href="#">Link</a></li>-->
-                        <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Accesos <span class="caret"></span></a>
-                          <ul class="dropdown-menu">
-                            <li><a href="{{ url('/noticias') }}">Noticias</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="{{ url('/mascotas') }}">Mascotas</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="{{ url('/admin') }}">Voluntarios</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                      @endguest
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -92,10 +73,8 @@
 
         @yield('content')
     </div>
-    <!-- Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-  @yield('js')
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

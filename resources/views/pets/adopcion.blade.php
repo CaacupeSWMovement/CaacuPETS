@@ -1,8 +1,8 @@
 @extends('base.cliente')
 @section('content')
 <!-- content-section-starts -->
-		<div class="content">
-			<div class="main">
+<div class="content">
+	<div class="main">
 	<div class="container">
 		<div class="blog-content">
 	     <div class="blog-content-head text-left">
@@ -28,7 +28,7 @@
 								 <div class="clearfix"></div>	
 							</div>
 						 <div class="clearfix"></div>
-				</div>
+						</div>
 				<div class="blog_posts">
 						<div class="section group example">			
 							<div class="col blog_1_of_2">
@@ -81,4 +81,11 @@
 </div>			
 		</div>
 	<!-- content-section-ends -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".nav").removeClass("active");
+  $("#adopcion").addClass("active");
+});
+</script>
 @endsection

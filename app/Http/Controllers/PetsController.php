@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Noticia;
+use App\Mascota;
 use Illuminate\Http\Request;
 
 class PetsController extends Controller
@@ -16,7 +17,8 @@ class PetsController extends Controller
     }
 
     public function photo () {
-    	return view('pets.photo');
+        $mascotas = Mascota::orderBy('id','desc')->get();
+    	return view('pets.photo')->with('mascotas',$mascotas);
     }
 
     public function adopcion () {
@@ -28,7 +30,7 @@ class PetsController extends Controller
     }
 
     public function noticia () {
-        $noticias = Noticia::all();
+        $noticias = Noticia::orderBy('id','desc')->get();
         return view('pets.noticia')->with('noticias',$noticias);
     	
     }

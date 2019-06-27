@@ -21,7 +21,7 @@ class CreateMascotasTable extends Migration
             $table->enum('mas_apto', ['para jugar con criaturas', 'para cuidar la casa', 'otros'])->default('otros');
             $table->enum('mas_castrado', ['si', 'no'])->default('no');
             $table->enum('mas_sexo', ['macho', 'hembra'])->default('macho');
-            $table->text('mas_descripcion');
+            $table->text('mas_descripcion')->nullable();
             $table->timestamps();
         });
     }

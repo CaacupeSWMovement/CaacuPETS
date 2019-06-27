@@ -2,14 +2,13 @@
 <html>
 <head>
 <title>CaacuPETS</title>
-<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="{{asset('css/bootstrap.css')}}" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/jquery.min.js"></script>
+<script src="{{asset('js/jquery.min.js')}}"></script>
 <!-- Custom Theme files -->
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="{{asset('css/style.css')}}" rel="stylesheet" type="text/css" media="all" />
 <!-- Custom Theme files -->
 <!-- navigation -->
-<link href="css/component.css" rel="stylesheet" type="text/css"  />
 <!-- navigation -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -29,8 +28,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       });
     });
   </script>
-  <script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
+  <script type="text/javascript" src="{{asset('js/move-top.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/easing.js')}}"></script>
 </head>
 <body>
     <!-- header-section-starts -->
@@ -38,7 +37,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="header-top">
 			<div class="container">
 				<p class="location"><i class="location"></i>Cordillera Caacupé</p>
-				<p class="phonenum">+595982145678</p>
+				<a target="_blank" href="https://web.whatsapp.com/send?phone=595983634750&amp;text=Hola CaacuPETS"><p class="phonenum">+595983634750</p></a>
 				<div class="clearfix"></div>
 			</div>
 		</div>
@@ -51,13 +50,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="top-menu">
 					<ul>
 					<nav class="cl-effect-5">
-						<li><a class="active" href="{{url('/')}}"><span data-hover="Inicio">Inicio</span></a></li> 
-						<li><a href="{{url('/about')}}"><span data-hover="Nosotros">Nosotros</span></a></li>
-						<li><a href="{{url('/photo')}}"><span data-hover="Galera">Galeria</span></a></li> 
-						<li><a href="{{url('/adopcion')}}"><span data-hover="Como_ayudar">Como Ayudar</span></a></li>
-						<li><a href="{{url('/voluntario')}}"><span data-hover="Voluntariado">Voluntariado</span></a></li>  
-						<li><a href="{{url('/noticia')}}"><span data-hover="Noticias">Noticias</span></a></li> 
-						<li><a href="{{url('/contacto')}}"><span data-hover="Contacto">Contacto</span></a></li>
+						<li><a id="inicio" class="active nav" href="{{url('/')}}"><span data-hover="Inicio">Inicio</span></a></li> 
+						<li><a id="nosotros" class="nav" href="{{url('/about')}}"><span data-hover="Nosotros">Nosotros</span></a></li>
+						<li><a id="galeria" class="nav" href="{{url('/photo')}}"><span data-hover="Galera">Galeria</span></a></li> 
+						<li><a id="adopcion" class="nav" href="{{url('/adopcion')}}"><span data-hover="Adopción">Adopción</span></a></li>
+						<li><a id="voluntariado" class="nav" href="{{url('/voluntario')}}"><span data-hover="Voluntariado">Voluntariado</span></a></li>
+						<li><a id="donaciones" class="nav" href="{{url('/voluntario')}}"><span data-hover="Donaciones">Donaciones</span></a></li>  
+						<li><a id="noticias" class="nav" href="{{url('/noticia')}}"><span data-hover="Noticias">Noticias</span></a></li> 
+						<li><a id="contacto" class="nav" href="{{url('/contacto')}}"><span data-hover="Contacto">Contacto</span></a></li>
 					</nav>
 					</ul>
 				</div>
@@ -76,15 +76,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	@yield('content')
 	<!-- footer-section-starts -->
-	<div class="footer">
+	<!--<div class="footer">
 		<div class="container">
-			<div class="col-md-5 contact-section">
-				<h4>Contacto</h4>
-					<input type="text" class="text" value="Nombre" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nombre';}">
-					<input type="text" class="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
-					<textarea onfocus="if(this.value == 'Mensaje') this.value='';" onblur="if(this.value == '') this.value='Mensaje';" >Mensaje</textarea>
-					<input type="submit" value="ENVIAR">
-			</div>
 			<div class="col-md-7 follow-us">
 				<h4>Seguinos</h4>
 				<div class="social-icons">
@@ -93,31 +86,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<i class="pinterest"></i>
 					<i class="googlepluse"></i>
 				</div>
-				<!--<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor</p>-->
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor</p>
 				<div class="copyright">
 					<p>Design by  <a href="">  Caacupe Software Movement</a></p>
 				</div>
 			</div>
-			<div class="clearfix"></div>
 		</div>
-	</div>
+	</div>-->
 	<!-- footer-section-ends -->
 	<script type="text/javascript">
-						$(document).ready(function() {
-							/*
-							var defaults = {
-					  			containerID: 'toTop', // fading element id
-								containerHoverID: 'toTopHover', // fading element hover id
-								scrollSpeed: 1200,
-								easingType: 'linear' 
-					 		};
-							*/
-							
-							$().UItoTop({ easingType: 'easeOutQuart' });
-							
-						});
-					</script>
-				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+		$(document).ready(function() {
+			$().UItoTop({ easingType: 'easeOutQuart' });
+			
+		});
+	</script>
+<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 
 </body>
 </html>

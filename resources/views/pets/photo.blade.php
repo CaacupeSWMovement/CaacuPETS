@@ -8,67 +8,27 @@
 		<div class="gallery-content-head text-left">
 			<h3>Fotos</h3>
 		</div>
-			<div class="section group">
-				<div class="grid_1_of_4 images_1_of_4">
-					 <a class="fancybox" href="images/gallery-img1.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="images/gallery-img1.jpg" class="img-style row6" alt=""><span> </span></a>
-				</div>
-				<div class="grid_1_of_4 images_1_of_4">
-					  <a class="fancybox" href="images/gallery-img2.jpg" data-fancybox-group="gallery" title="Etiam quis mi eu elit temp"><img src="images/gallery-img2.jpg" class="img-style row6" alt=""><span> </span></a>
-				</div>
-				<div class="grid_1_of_4 images_1_of_4">
-					  <a class="fancybox" href="images/gallery-img3.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="images/gallery-img3.jpg" class="img-style row6" alt=""><span> </span></a>
-				</div>
-				<div class="grid_1_of_4 images_1_of_4">
-					  <a class="fancybox" href="images/gallery-img4.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="images/gallery-img4.jpg" class="img-style row6" alt=""><span> </span></a>
-				</div>
-			</div> 	
-			<div class="section group">
-				<div class="grid_1_of_4 images_1_of_4">
-					 <a class="fancybox" href="images/gallery-img5.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="images/gallery-img5.jpg" class="img-style row6" alt=""><span> </span></a>
-				</div>
-				<div class="grid_1_of_4 images_1_of_4">
-					  <a class="fancybox" href="images/gallery-img6.jpg" data-fancybox-group="gallery" title="Etiam quis mi eu elit temp"><img src="images/gallery-img6.jpg" class="img-style row6" alt=""><span> </span></a>
-				</div>
-				<div class="grid_1_of_4 images_1_of_4">
-					  <a class="fancybox" href="images/gallery-img7.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="images/gallery-img7.jpg" class="img-style row6" alt=""><span> </span></a>
-				</div>
-				<div class="grid_1_of_4 images_1_of_4">
-					  <a class="fancybox" href="images/gallery-img8.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="images/gallery-img8.jpg" class="img-style row6" alt=""><span> </span></a>
-				</div>
-			</div>
-			<div class="section group">
-				<div class="grid_1_of_4 images_1_of_4">
-					 <a class="fancybox" href="images/gallery-img1.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="images/gallery-img1.jpg" class="img-style row6" alt=""><span> </span></a>
-				</div>
-				<div class="grid_1_of_4 images_1_of_4">
-					  <a class="fancybox" href="images/gallery-img2.jpg" data-fancybox-group="gallery" title="Etiam quis mi eu elit temp"><img src="images/gallery-img2.jpg" class="img-style row6" alt=""><span> </span></a>
-				</div>
-				<div class="grid_1_of_4 images_1_of_4">
-					  <a class="fancybox" href="images/gallery-img3.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="images/gallery-img3.jpg" class="img-style row6" alt=""><span> </span></a>
-				</div>
-				<div class="grid_1_of_4 images_1_of_4">
-					  <a class="fancybox" href="images/gallery-img4.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="images/gallery-img4.jpg" class="img-style row6" alt=""><span> </span></a>
-				</div>
-			</div> 				
-			
-			<div class="section group">
-				<div class="grid_1_of_4 images_1_of_4">
-					 <a class="fancybox" href="images/gallery-img5.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="images/gallery-img5.jpg" class="img-style row6" alt=""><span> </span></a>
-				</div>
-				<div class="grid_1_of_4 images_1_of_4">
-					  <a class="fancybox" href="images/gallery-img9.jpg" data-fancybox-group="gallery" title="Etiam quis mi eu elit temp"><img src="images/gallery-img9.jpg" class="img-style row6" alt=""><span> </span></a>
-				</div>
-				<div class="grid_1_of_4 images_1_of_4">
-					  <a class="fancybox" href="images/gallery-img7.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="images/gallery-img7.jpg" class="img-style row6" alt=""><span> </span></a>
-				</div>
-				<div class="grid_1_of_4 images_1_of_4">
-					  <a class="fancybox" href="images/gallery-img1.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="images/gallery-img1.jpg" class="img-style row6" alt=""><span> </span></a>
-				</div>
-			</div> 	
+			<div class="row">
+			@foreach($mascotas as $mascota)
+            <div class="col-sm-3 col-xs-6">
+                <a href="#">
+                    <img class="img-responsive portfolio-item" height="100" width="400" src="{{asset('imagenes/mascotas/'.$mascota->mas_imagen)}}" alt="">
+                    <div style="padding: 10px;"></div>
+                </a>
+            </div>
+			@endforeach
+        </div>	
    </div>
 </div>
 
 		</div> 
 	</div>
 	<!-- content-section-ends -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".nav").removeClass("active");
+  $("#galeria").addClass("active");
+});
+</script>
 @endsection

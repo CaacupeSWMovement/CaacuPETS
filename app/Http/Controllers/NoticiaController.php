@@ -1,9 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Input;
 use Illuminate\Http\Request;
+use Validator;
+use Response;
 use App\Noticia;
-use Illuminate\Support\Facades\Validator;
+use View;
+use Image;
+
 class NoticiaController extends Controller
 {
     /**
@@ -11,30 +16,11 @@ class NoticiaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-        //
-        $request->session()->put('search', $request
-              ->has('search') ? $request->get('search') : ($request->session()
-              ->has('search') ? $request->session()->get('search') : ''));
+        $noticias = Noticia::orderBy('id','desc')->get();;
 
-              $request->session()->put('field', $request
-                      ->has('field') ? $request->get('field') : ($request->session()
-                      ->has('field') ? $request->session()->get('field') : 'not_titulo'));
-
-                      $request->session()->put('sort', $request
-                              ->has('sort') ? $request->get('sort') : ($request->session()
-                              ->has('sort') ? $request->session()->get('sort') : 'asc'));
-
-        $noticias = new Noticia();
-            $noticias = $noticias->where('not_titulo', 'like', '%' . $request->session()->get('search') . '%')
-                //->orderBy($request->session()->get('field'), $request->session()->get('sort'))
-                ->paginate(5);
-            if ($request->ajax()) {
-              return view('noticias.index', compact('noticias'));
-            } else {
-              return view('noticias.ajax', compact('noticias'));
-            }
+        return view('admin.noticias.index', ['noticias' => $noticias]);
     }
 
     /**
@@ -42,35 +28,11 @@ class NoticiaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function create()
     {
         //
-        if ($request->isMethod('get'))
-        return view('noticias.form');
-
-        $rules = [
-          'not_titulo' => 'required',
-          'not_sub_titulo' => 'required',
-          'not_contenido' => 'required',
-        ];
-
-        $validator = Validator::make($request->all(), $rules);
-        if ($validator->fails())
-        return response()->json([
-          'fail' =>true,
-          'errors' => $validator->errors()
-        ]);
-
-        $noticia = new Noticia();
-        $noticia->not_titulo = $request->not_titulo;
-        $noticia->not_sub_titulo = $request->not_sub_titulo;
-        $noticia->not_contenido = $request->not_contenido;
-        $noticia->save();
-
-        return response()->json([
-          'fail' => false,
-          'redirect_url' => url('noticias')
-        ]);
+        $noticia = new Noticia;
+        return view('admin.noticias.create', compact('noticia'));
     }
 
     /**
@@ -81,7 +43,23 @@ class NoticiaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $noticia = new Noticia();
+        $noticia->not_titulo = $request->not_titulo;
+        $noticia->not_sub_titulo = $request->not_sub_titulo;
+        if(Input::hasFile('not_imagen')) {
+            $file=Input::file('not_imagen');
+            Image::make($request->file('not_imagen'))
+                ->resize(600, 600)
+                ->save(public_path().'/imagenes/noticias/' . $file->getClientOriginalName());
+            $noticia->not_imagen=$file->getClientOriginalName();
+        }
+        $noticia->not_contenido = $request->not_contenido;
+
+        if($noticia -> save()){
+            return redirect("/administracion/noticia")->with('Noticia', 'Noticia agregada correctamente!');
+        }else{
+            return view("admin.noticia.create", ["noticia" => $noticia]);
+        }
     }
 
     /**
@@ -90,12 +68,11 @@ class NoticiaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Request $request, $id)
+    public function show($id)
     {
-        //
-        if($request->isMethod('get')) {
-          return view('noticias.detail',['noticia' => Noticia::find($id)]);
-        }
+        $noticia = Noticia::findOrFail($id);
+
+        return view('noticia.show', ['noticia' => $noticia]);
     }
 
     /**
@@ -107,6 +84,8 @@ class NoticiaController extends Controller
     public function edit($id)
     {
         //
+        $noticia = Noticia::find($id);
+        return view("admin.noticias.edit", compact('noticia'));
     }
 
     /**
@@ -118,33 +97,23 @@ class NoticiaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
-      if ($request->isMethod('get'))
-      return view('noticias.form',['noticia' => Noticia::find($id)]);
+        $noticia = Noticia::find($id);
+        $noticia->not_titulo = $request->not_titulo;
+        $noticia->not_sub_titulo = $request->not_sub_titulo;
+        if(Input::hasFile('not_imagen')) {
+            $file=Input::file('not_imagen');
+            Image::make($request->file('not_imagen'))
+                ->resize(600, 600)
+                ->save(public_path().'/imagenes/noticias/' . $file->getClientOriginalName());
+            $noticia->not_imagen=$file->getClientOriginalName();
+        }
+        $noticia->not_contenido = $request->not_contenido;
 
-      $rules = [
-        'not_titulo' => 'required',
-        'not_sub_titulo' => 'required',
-        'not_contenido' => 'required',
-      ];
-
-      $validator = Validator::make($request->all(), $rules);
-      if ($validator->fails())
-      return response()->json([
-        'fail' =>true,
-        'errors' => $validator->errors()
-      ]);
-
-      $noticia = Noticia::find($id);
-      $noticia->not_titulo = $request->not_titulo;
-      $noticia->not_sub_titulo = $request->not_sub_titulo;
-      $noticia->not_contenido = $request->not_contenido;
-      $noticia->save();
-
-      return response()->json([
-        'fail' => false,
-        'redirect_url' => url('noticias')
-      ]);
+        if($noticia -> save()){
+            return redirect("/administracion/noticia")->with('Noticia', 'Noticia editada correctamente!');
+        }else{
+            return view("admin.noticias.edit", ["noticia" => $noticia]);
+        }
     }
 
     /**
@@ -155,8 +124,8 @@ class NoticiaController extends Controller
      */
     public function destroy($id)
     {
-        //
-        Noticia::destroy($id);
-        return redirect('noticias');
+        $noticia = Noticia::findOrFail($id);
+        $noticia->delete();
+        return redirect("administracion/noticia")->with('Noticia', 'Noticia eliminada correctamente!');
     }
 }
