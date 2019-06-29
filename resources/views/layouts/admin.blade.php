@@ -57,6 +57,26 @@
                     </li>
                     <h3 class="menu-title">Acciones</h3><!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
+                        <a href="{{url('administracion/slide')}}" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-image" aria-hidden="true"></i>Slide</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-list" aria-hidden="true"></i><a href="{{url('administracion/slide')}}">Listar</a></li>
+                            <li><i class="fa fa-plus-circle" aria-hidden="true"></i><a href="{{url('administracion/slide/create')}}">Agregar</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="{{url('administracion/welcome')}}" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-child" aria-hidden="true"></i>Bienvenida</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-list" aria-hidden="true"></i><a href="{{url('administracion/welcome')}}">Listar</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="{{url('administracion/testimonios')}}" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-envelope" aria-hidden="true"></i>Testimonios</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-list" aria-hidden="true"></i><a href="{{url('administracion/testimonios')}}">Listar</a></li>
+                            <li><i class="fa fa-plus-circle" aria-hidden="true"></i><a href="{{url('administracion/testimonios/create')}}">Agregar</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
                         <a href="{{url('administracion/mascota')}}" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-paw" aria-hidden="true"></i>Mascotas</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-list" aria-hidden="true"></i><a href="{{url('administracion/mascota')}}">Listar</a></li>

@@ -3,13 +3,18 @@
 namespace App\Http\Controllers;
 use App\Noticia;
 use App\Mascota;
+use App\Slide;
+use App\Welcome;
 use Illuminate\Http\Request;
+use DB;
 
 class PetsController extends Controller
 {
     //
 	public function index () {
-		return view('pets.index');
+        $slides = DB::table('slide')->get();
+        $welcome = DB::table('welcome')->get();
+		return view('pets.index',['slides' => $slides,'welcome' => $welcome]);
 	}
 	
     public function about () {

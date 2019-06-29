@@ -11,7 +11,7 @@
                         </li>
                         <li>
                             
-                            <span>ver</span>
+                            <span><a href="{{url('administracion/slide')}}">ver</a></span>
                         </li>
                     </ul>
                 </div>
@@ -28,7 +28,7 @@
                         </li>
                         <li>
                             
-                            <span><a href="{{url('administracion/noticia')}}">Ver</a></span>
+                            <span><a href="{{url('administracion/welcome')}}">Ver</a></span>
                         </li>
                     </ul>
                 </div>
@@ -45,7 +45,7 @@
                         </li>
                         <li>
                             
-                            <span><a href="{{url('administracion/noticia')}}">Ver</a></span>
+                            <span><a href="{{url('administracion/testimonios')}}">Ver</a></span>
                         </li>
                     </ul>
                 </div>

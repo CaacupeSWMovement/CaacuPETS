@@ -20,11 +20,12 @@ Route::get('/administracion', function () {
 });
 Route::resource('administracion/noticia','NoticiaController');
 Route::resource('administracion/mascota','MascotaController');
+Route::resource('administracion/slide','SlideController');
+Route::resource('administracion/welcome','WelcomeController');
+Route::resource('administracion/testimonios','TestimoniosController');
 Route::resource('administracion/user','UserController');
 });
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', 'PetsController@index');
 Route::get('/about', 'PetsController@about');
