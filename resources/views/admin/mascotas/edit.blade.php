@@ -24,19 +24,19 @@
                               </div>
                               <div class="form-group">
                                   <label for="cc-number" class="control-label mb-1">Imagen de la mascota</label>
-                                  <input name="mas_imagen" placeholder="Titulo de la noticia" id="cc-pament" name="cc-payment" type="file" class="form-control" aria-required="true" aria-invalid="false" value="{{asset('imagenes/mascota/'.$mascota->mas_imagen)}}" required>
-                                  <img src="{{asset('imagenes/mascota/'.$mascota->mas_imagen)}}" class="img-responsive" alt="" style="width: 100px;"/>
+                                  <input name="mas_imagen" placeholder="Titulo de la noticia" id="cc-pament" name="cc-payment" type="file" class="form-control" aria-required="true" aria-invalid="false" value="{{asset('imagenes/mascota/'.$mascota->mas_imagen)}}">
+                                  <img src="{{asset('imagenes/mascotas/'.$mascota->mas_imagen)}}" class="img-responsive" alt="" style="width: 100px;"/>
                               </div>
                               <div class="form-group">
                                   <label for="exampleFormControlSelect1">Es apto para</label>
                                   <select name="mas_apto" value="{{$mascota->mas_apto}}" class="form-control" id="exampleFormControlSelect1">
-                                    <option>para jugar con criaturas</option>
-                                    <option>para cuidar la casa</option>
-                                    <option>otros</option>
+                                    <option>Jugar con criaturas</option>
+                                    <option>Cuidar la casa</option>
+                                    <option>Otros</option>
                                   </select>
                               </div>
                               <div class="form-group">
-                                  <label for="exampleFormControlSelect1">Esta castrado?</label>
+                                  <label for="exampleFormControlSelect1">¿Está castrado?</label>
                                   <select name="mas_castrado" value="{{$mascota->mas_castrado}}" class="form-control" id="exampleFormControlSelect1">
                                     @if($mascota->mas_sexo == 'si')
                                     <option>si</option>
@@ -51,12 +51,12 @@
                                   <label for="exampleFormControlSelect1">Sexo</label>
                                   <select name="mas_sexo" value="{{$mascota->mas_sexo}}" class="form-control" id="exampleFormControlSelect1">
                                   @if($mascota->mas_sexo == 'macho')
-                                    <option>macho</option>
+                                    <option>Macho</option>
                                   @else
-                                    <option>hembra</option>
+                                    <option>Hembra</option>
                                   @endif
-                                    <option>macho</option>
-                                    <option>hembra</option>
+                                    <option>Macho</option>
+                                    <option>Hembra</option>
                                   </select>
                               </div>
                               <div class="form-group">

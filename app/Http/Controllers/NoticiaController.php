@@ -50,7 +50,7 @@ class NoticiaController extends Controller
             $file=Input::file('not_imagen');
             Image::make($request->file('not_imagen'))
                 ->resize(600, 600)
-                ->save(public_path().'/imagenes/noticias/' . $file->getClientOriginalName());
+                ->save(public_path().'imagenes/noticias/' . $file->getClientOriginalName());
             $noticia->not_imagen=$file->getClientOriginalName();
         }
         $noticia->not_contenido = $request->not_contenido;
@@ -104,7 +104,7 @@ class NoticiaController extends Controller
             $file=Input::file('not_imagen');
             Image::make($request->file('not_imagen'))
                 ->resize(600, 600)
-                ->save(public_path().'/imagenes/noticias/' . $file->getClientOriginalName());
+                ->save(public_path().'imagenes/noticias/' . $file->getClientOriginalName());
             $noticia->not_imagen=$file->getClientOriginalName();
         }
         $noticia->not_contenido = $request->not_contenido;

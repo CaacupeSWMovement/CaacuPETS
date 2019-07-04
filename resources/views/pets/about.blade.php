@@ -2,18 +2,17 @@
 @section('content')
 <div class="content">
 		<!--about-->
+		@foreach($nosotros as $nos)
 		<div class="main">
 			<div class="container">
 				<div class="about-top">
 					<div class="about-top-info">
-							<h3>Nosotros</h3>
+							<h3>{{$nos->titulo1}}</h3>
 							<div class="col-md-4 about-img">
-								<img src="images/pic8.jpg" alt=""/ style="height: 400px;">
+								<img src="{{asset('images/'.$nos->img1)}}" alt="" style="height: 400px;" />
 							</div>
 							<div class="col-md-8 about-desc">
-								<p>
-									Somos un equipo multidisciplinario de estudiantes y profesionales, involucrados en todo tipo de areas, Derecho, Psicología, etc, cuyo interés en común es el cuidado de los animales y la preservación.
-								</p>
+								<p style="text-align: justify;">{{$nos->texto1}}</p>
 								
 							</div>
 							<div class="clearfix"> </div>
@@ -26,19 +25,17 @@
 		<div class="about-section text-center">
 			<div class="container">
 				<div class="col-md-6 about-section-grid text-left">
-					<h4>Misión</h4>
-					<p>Nuestra misión es rescatar animales callejeros en riesgo para otorgarles una rehabilitación física y psicológica, brindándoles la oportunidad de un hogar y una familia. <br>Mediante una red integrada podemos realizar esterilizaciones, rescates y adopciones de perros y gatos, logrando concientizar cada día a más personas, quienes se han ido uniendo a esta labor.
-					</p>
+					<h4>{{$nos->titulo2}}</h4>
+					<p style="text-align: justify;">{{$nos->texto2}}</p>
 				</div>
 				<div class="col-md-6 about-section-grid text-left">
-					<h4>Visión</h4>
-					<p>Nuestra visión es ser la fundación de animales en riesgo con mayor impacto de Cordillera, generando un cambio efectivo en la conciencia de la sociedad para acabar con el abandono, la humillación y el abuso que sufren miles de animales al día.
-					Educando a través de nuestra gran red de estudiantes y profesionales, lograremos otorgar la oportunidad de un hogar a los callejeros de Caacupé.</p>
+					<h4>{{$nos->titulo3}}</h4>
+					<p style="text-align: justify;">{{$nos->texto3}}</p>
 				</div>
 				<div class="clearfix"></div>
 			</div>
 		</div>
-				
+		@endforeach
 				<!--<div class="aboutus">
 							<div class="container">
 						<div class="about-bottom-info">
@@ -105,7 +102,6 @@
 					<div class="clearfix"> </div>
 				</div>-->
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
   $(".nav").removeClass("active");

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -77,10 +77,30 @@
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
+                        <a href="{{url('administracion/nosotros')}}" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-address-card" aria-hidden="true"></i>Nosotros</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-list" aria-hidden="true"></i><a href="{{url('administracion/nosotros')}}">Listar</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
                         <a href="{{url('administracion/mascota')}}" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-paw" aria-hidden="true"></i>Mascotas</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-list" aria-hidden="true"></i><a href="{{url('administracion/mascota')}}">Listar</a></li>
                             <li><i class="fa fa-plus-circle" aria-hidden="true"></i><a href="{{url('administracion/mascota/create')}}">Agregar</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="{{url('administracion/voluntariado')}}" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-street-view" aria-hidden="true"></i>Voluntariado</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-list" aria-hidden="true"></i><a href="{{url('administracion/voluntariado')}}">Listar</a></li>
+                            <li><i class="fa fa-plus-circle" aria-hidden="true"></i><a href="{{url('administracion/voluntariado/create')}}">Agregar</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="{{url('administracion/donaciones')}}" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-bell" aria-hidden="true"></i>Donaciones</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-list" aria-hidden="true"></i><a href="{{url('administracion/donaciones')}}">Listar</a></li>
+                            <li><i class="fa fa-plus-circle" aria-hidden="true"></i><a href="{{url('administracion/donaciones/create')}}">Agregar</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">

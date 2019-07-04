@@ -61,7 +61,7 @@
                         </li>
                         <li>
                             
-                            <span><a href="{{url('administracion/mascota')}}">Ver</a></span>
+                            <span><a href="{{url('administracion/nosotros')}}">Ver</a></span>
                         </li>
                     </ul>
                 </div>
@@ -93,7 +93,7 @@
                         </li>
                         <li>
                             
-                            <span><a href="{{url('administracion/mascota')}}">Ver</a></span>
+                            <span><a href="{{url('administracion/voluntariado')}}">Ver</a></span>
                         </li>
                     </ul>
                 </div>
@@ -109,7 +109,7 @@
                         </li>
                         <li>
                             
-                            <span><a href="{{url('administracion/mascota')}}">Ver</a></span>
+                            <span><a href="{{url('administracion/donaciones')}}">Ver</a></span>
                         </li>
                     </ul>
                 </div>

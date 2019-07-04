@@ -52,7 +52,7 @@ class MascotaController extends Controller
             $file=Input::file('mas_imagen');
             Image::make($request->file('mas_imagen'))
                 ->resize(144, 145)
-                ->save(public_path().'/imagenes/mascotas/' . $file->getClientOriginalName());
+                ->save(public_path().'imagenes/mascotas/' . $file->getClientOriginalName());
             $mascota->mas_imagen=$file->getClientOriginalName();
         }
         $mascota->mas_apto = $request->mas_apto;
@@ -108,7 +108,7 @@ class MascotaController extends Controller
             $file=Input::file('mas_imagen');
             Image::make($request->file('mas_imagen'))
                 ->resize(144, 145)
-                ->save(public_path().'/imagenes/mascotas/' . $file->getClientOriginalName());
+                ->save(public_path().'imagenes/mascotas/' . $file->getClientOriginalName());
             $mascota->mas_imagen=$file->getClientOriginalName();
         }
         $mascota->mas_apto = $request->mas_apto;

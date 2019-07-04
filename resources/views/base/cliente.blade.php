@@ -37,7 +37,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="header-top">
 			<div class="container">
 				<p class="location"><i class="location"></i>Cordillera Caacupé</p>
-				<a target="_blank" href="https://web.whatsapp.com/send?phone=595983634750&amp;text=Hola CaacuPETS"><p class="phonenum">+595983634750</p></a>
+				<a target="_blank" href="https://api.whatsapp.com/send?phone=595983634750&amp;text=Hola CaacuPETS"><p class="phonenum">+595983634750</p></a>
 				<div class="clearfix"></div>
 			</div>
 		</div>
@@ -52,10 +52,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<nav class="cl-effect-5">
 						<li><a id="inicio" class="active nav" href="{{url('/')}}"><span data-hover="Inicio">Inicio</span></a></li> 
 						<li><a id="nosotros" class="nav" href="{{url('/about')}}"><span data-hover="Nosotros">Nosotros</span></a></li>
-						<li><a id="galeria" class="nav" href="{{url('/photo')}}"><span data-hover="Galera">Galeria</span></a></li> 
 						<li><a id="adopcion" class="nav" href="{{url('/adopcion')}}"><span data-hover="Adopción">Adopción</span></a></li>
 						<li><a id="voluntariado" class="nav" href="{{url('/voluntario')}}"><span data-hover="Voluntariado">Voluntariado</span></a></li>
-						<li><a id="donaciones" class="nav" href="{{url('/voluntario')}}"><span data-hover="Donaciones">Donaciones</span></a></li>  
+						<li><a id="proyecto" class="nav" href="{{url('/proyecto')}}"><span data-hover="Proyecto">Proyecto</span></a></li>
+						<li><a id="donaciones" class="nav" href="{{url('/donaciones')}}"><span data-hover="Donaciones">Donaciones</span></a></li>  
 						<li><a id="noticias" class="nav" href="{{url('/noticia')}}"><span data-hover="Noticias">Noticias</span></a></li> 
 						<li><a id="contacto" class="nav" href="{{url('/contacto')}}"><span data-hover="Contacto">Contacto</span></a></li>
 					</nav>

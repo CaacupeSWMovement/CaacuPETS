@@ -7,7 +7,7 @@
 			  <ul class="rslides" id="slider">
 			  	@foreach($slides as $slide)
 				 <li>
-					 <img src="{{asset('images/'.$slide->slide)}}" alt="" style="height: 400px !important;" />
+					 <img src="{{asset('images/'.$slide->slide)}}" alt="" style="height: 500px !important;" />
 					  <!--<div class="caption">
 						<h2>Como cuidar a tu mascota</h2>
 						<a class="more" href="#">Leer mas</a>
@@ -44,10 +44,9 @@
 			<div class="textimonials-section text-center">
 				<div class="container">
 					<h1 style="color: white;font-size: 39px;">TESTIMONIOS</h1><br>
-					<h5><img src="images/t.png" alt="" />
-					Gracias Caacupets!!! 
-                     Personas tan nobles, 
-						Que solidaria y con alma tan pura la señora Sussana</h5>
+					@foreach($testimonios as $test)
+						<h5><img src="images/t.png" alt="" />{{$test->testimonio}}</h5>
+					@endforeach
 				</div>
 			</div>
 		</div>
